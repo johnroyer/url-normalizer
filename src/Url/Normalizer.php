@@ -51,8 +51,12 @@ class Normalizer
      */
     private $query_delimiter;
 
-    public function __construct($url = null, $remove_empty_delimiters = false, $sort_query_params = false, $removeTrackingParameter = false)
-    {
+    public function __construct(
+        $url = null,
+        $remove_empty_delimiters = false,
+        $sort_query_params = false,
+        $removeTrackingParameter = false
+    ) {
         if ($url) {
             $this->setUrl($url);
         }
