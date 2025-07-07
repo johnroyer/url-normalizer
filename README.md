@@ -2,7 +2,7 @@
 
 This URL normalizer is fork from [glenscott/url-normalizer](https://github.com/glenscott/url-normalizer) with some changes:
 - upgrade PHPUnit to v9.x
-- remove tracking parameter as an option (`utm_source`, `fbclid`, etc)
+- add parameter for removing tracking parameter (`utm_source`, `fbclid`, etc)
 
 
 # Syntax based normalization of URI's
