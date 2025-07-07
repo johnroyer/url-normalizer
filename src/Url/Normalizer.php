@@ -23,7 +23,7 @@ namespace Zeroplex\Url;
  */
 class Normalizer
 {
-    private $url;
+    private string|null $url;
     private $scheme;
     private $host;
     private $port;
@@ -51,14 +51,18 @@ class Normalizer
      */
     private $query_delimiter;
 
-    public function __construct($url = null, $remove_empty_delimiters = false, $sort_query_params = false, $removeTrackingParameter = false)
-    {
+    public function __construct(
+        string|null $url = null,
+        $remove_empty_delimiters = false,
+        $sort_query_params = false,
+        $removeTrackingParameter = false
+    ) {
         if ($url) {
             $this->setUrl($url);
         }
 
         $this->remove_empty_delimiters = $remove_empty_delimiters;
-        $this->sort_query_params       = $sort_query_params;
+        $this->sort_query_params = $sort_query_params;
         $this->removeTrackingParameter = boolval($removeTrackingParameter);
     }
 
@@ -80,12 +84,12 @@ class Normalizer
         return $queryString;
     }
 
-    public function getUrl()
+    public function getUrl(): string|null
     {
         return $this->url;
     }
 
-    public function setUrl($url)
+    public function setUrl(string $url): bool
     {
         $this->url = $url;
 
@@ -136,7 +140,6 @@ class Normalizer
 
     public function normalize()
     {
-
         // URI Syntax Components
         // scheme authority path query fragment
         // @link https://tools.ietf.org/html/rfc3986#section-3
