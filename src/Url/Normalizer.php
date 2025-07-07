@@ -84,12 +84,12 @@ class Normalizer
         return $queryString;
     }
 
-    public function getUrl()
+    public function getUrl(): string|null
     {
         return $this->url;
     }
 
-    public function setUrl($url)
+    public function setUrl(string $url): bool
     {
         $this->url = $url;
 
