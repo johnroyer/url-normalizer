@@ -140,7 +140,6 @@ class Normalizer
 
     public function normalize()
     {
-
         // URI Syntax Components
         // scheme authority path query fragment
         // @link https://tools.ietf.org/html/rfc3986#section-3
