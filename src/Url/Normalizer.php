@@ -23,7 +23,7 @@ namespace Zeroplex\Url;
  */
 class Normalizer
 {
-    private $url;
+    private string|null $url;
     private $scheme;
     private $host;
     private $port;
@@ -52,7 +52,7 @@ class Normalizer
     private $query_delimiter;
 
     public function __construct(
-        $url = null,
+        string|null $url = null,
         $remove_empty_delimiters = false,
         $sort_query_params = false,
         $removeTrackingParameter = false
