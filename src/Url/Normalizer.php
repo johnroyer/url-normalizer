@@ -62,7 +62,7 @@ class Normalizer
         }
 
         $this->remove_empty_delimiters = $remove_empty_delimiters;
-        $this->sort_query_params       = $sort_query_params;
+        $this->sort_query_params = $sort_query_params;
         $this->removeTrackingParameter = boolval($removeTrackingParameter);
     }
 
